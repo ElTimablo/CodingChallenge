@@ -14,7 +14,6 @@ ADD site.conf /etc/apache2/sites-available/
 RUN rm /etc/apache2/sites-enabled/000-default.conf
 RUN ln -s /etc/apache2/sites-available/site.conf /etc/apache2/sites-enabled/000-default.conf
 RUN a2enmod ssl
-RUN sed -i -e s/IPADDRVAR/$IPADDRESS/g /etc/apache2/sites-enabled/000-default.conf
 
 # Get the page
 ADD *.html /var/www/html/
