@@ -2,7 +2,6 @@ FROM debian:latest
 
 MAINTAINER Tim Robertson version: 0.0.1
 WORKDIR /
-ENV IPADDRESS 172.17.0.2
 # Configure the base system
 RUN apt-get update && apt-get install -y apache2 openssl
 
